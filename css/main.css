@@ -1,0 +1,291 @@
+   *{
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box
+   } 
+   ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none
+    }
+    .container {
+        background-image:url('../img/header-BG.png') ;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .container main{
+        width:1170px; 
+        margin:0 auto;
+        padding-top:30px
+    }
+    .container main header{
+        height:1000px;  
+        
+    }
+    .container main header ul{
+        display: flex;
+        width: 350px;
+        justify-content: space-between
+    }
+    .container main header ul a{
+        color:black;
+    }
+    header nav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center ;
+        margin: 0 auto
+    }
+    nav>div:nth-child(2){
+        display:flex;
+        justify-content: space-between;
+        width:700px;
+        align-items: center
+    }
+    nav>div:nth-child(2)>a{
+        color:#39d1a0;
+        padding:12px 50px;
+        font-weight: 700;
+        border-radius:50px;
+        border:white solid 2px;
+        outline:none;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+        -webkit-font-smoothing: antialiased;
+        background-color:white;
+        transition: .3s
+    }
+    nav>div:nth-child(2)>a:hover{
+        background: none;
+        color: white;
+        box-shadow: none
+    }
+     /* navbar hover effect */
+     nav ul li a,
+     nav ul li a:after,
+     nav ul li a:before {
+       transition: all .3s;
+     }
+     nav ul li a:hover {
+       color: #fff;
+     }
+    .stroke ul li a{
+        position: relative;
+        padding: 15px 0;
+    }
+
+    .stroke ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #fff;
+        height: 1px;
+    }
+    .stroke ul li a:hover:after {
+        width: 100%;
+    }
+    
+    nav svg{
+        display:none
+    }
+
+    /* banner style start */
+
+    header .bannerContainer {
+        width:1170px;
+        padding: 120px 0;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    header .bannerContainer #left_side_banner{
+        width:500px;
+    }
+    header .bannerContainer #left_side_banner h1{
+        color:#fff;
+        text-transform: uppercase;
+        font-size:40px
+    }
+    header .bannerContainer #left_side_banner p{
+        color:#535353;
+        width:335px;
+        line-height: 25px;
+    }
+    header .bannerContainer #left_side_banner>div{
+        margin-top:80px;
+    }
+    header .bannerContainer #left_side_banner>div h3{
+        color:#fff;
+        margin:12px 0;
+        padding-left:15px;
+    }
+    header .bannerContainer #left_side_banner>div>div{
+        display:flex;
+    }
+    header .bannerContainer #left_side_banner>div>div .appStores{
+        background: white;
+        padding:10px;
+        border-radius:50px;
+        width:180px;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center
+    }
+    .appStores>div{
+        margin-left:8px
+    }
+    #left_side_banner>div>div div.appStores:nth-child(1){
+        margin-right:30px;
+    }
+    #left_side_banner>div>div div.appStores:nth-child(1) img{
+        width:30px;   
+    }
+    #left_side_banner>div>div div.appStores:nth-child(2) img{
+        width:25px;
+        margin-left:5px
+        
+    }
+    #left_side_banner>div>div .appStores h5,#left_side_banner>div>div .appStores h6{
+        margin:0;
+    }
+    #left_side_banner>div>div .appStores h6{
+        font-weight:500;
+    }
+    #left_side_banner>div>div .appStores h5{
+        font-size:17px
+    }
+
+    header #right_side_banner{
+        margin-top: 55px;
+        background:#fff;
+        width:527px;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color:#404040;
+        height:180px;
+    }
+    header #right_side_banner>div>img{
+        transform: translateX(20px) translateY(-60px);
+    }
+    header #right_side_banner>div:nth-child(1){
+        margin:20px 0 0 30px
+    }
+    header #right_side_banner>div:nth-child(1)>h2{
+        margin:10px 0
+    }
+    header #right_side_banner>div:nth-child(1)>p{
+        font-size:11px;
+        margin:10px 0
+    }
+    header #right_side_banner span{
+        font-size:13px
+     }
+    header #right_side_banner span:nth-child(1){
+       color:#fff;
+       padding:5px 10px;
+       background: #39d1a0;
+       border-radius: 50px;
+       margin-right:10px;
+       font-weight: 900;
+    }
+    header #right_side_banner span:nth-child(2){
+        text-decoration: line-through;
+     }
+     
+
+
+    
+    @media (min-width: 992px) and (max-width: 1199px) { 
+        .container main{
+            width:970px; 
+        }
+        .container main header ul {
+            width: 300px;
+        } 
+        nav>div:nth-child(2){
+            width:600px;
+        }  
+    }
+    @media (min-width: 768px) and (max-width: 991px) { 
+        .container main{
+            width:750px; 
+        }
+        .container main header ul {
+            width: 280px;
+        } 
+        nav>div:nth-child(2){
+            width:500px;
+        }  
+     }
+    
+     @media (max-Width :767px){
+         body{
+             overflow-x:hidden
+         }
+        .container main{
+            width:auto; 
+            padding:10px
+        }
+        nav>div:nth-child(2){
+            display:none;
+            opacity: 0;
+            width:162px;
+            margin-top:60px;
+            flex-direction: column;
+            transition:.3s;
+            z-index:50;
+            position: absolute;
+            top: 4%;
+            left: calc(50% - 81px);
+        }  
+        main header ul{
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            padding:0;
+            width: 100% !important;
+        }
+
+        main header ul li{
+            padding:30px 0;
+        }
+        nav>svg{
+            position: absolute;
+            right:10px;
+            top:10px;
+            transition:.3s
+        }
+        nav svg{
+            display:block;
+            width:60px;
+            height:60px
+        }
+        nav svg circle{
+            cx:30px;
+            cy:30px;
+            position: absolute;
+        }
+        nav>div:nth-child(3){
+            width:138px;
+            display: flex;
+            justify-content: flex-end
+        }
+        .burger_Clicked{
+            transform:scale(40);
+        }
+        .oppacityMenuNav{
+            opacity: 1 !important;
+        }
+        .ShowMenu{
+            display:flex !important;
+            
+        }
+        header nav {
+            align-items: stretch;
+        }
+     }
