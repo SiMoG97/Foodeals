@@ -8,10 +8,13 @@
     a{
         text-decoration: none
     }
+    body{
+        overflow-x: hidden
+    }
     .container {
         background-image:url('../img/header-BG.png') ;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: 100% 100%;  
     }
     .container main{
         width:1170px; 
@@ -19,7 +22,7 @@
         padding-top:30px
     }
     .container main header{
-        height:1000px;  
+        /* height:2000px;   */
         
     }
     .container main header ul{
@@ -104,6 +107,7 @@
     }
     header .bannerContainer #left_side_banner{
         width:500px;
+        margin-bottom: 120px;
     }
     header .bannerContainer #left_side_banner h1{
         color:#fff;
@@ -133,7 +137,18 @@
         width:180px;
         display:flex;
         justify-content: flex-start;
-        align-items: center
+        align-items: center;
+        box-shadow:0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+        user-select:none;
+        cursor:pointer;
+        border: 2px solid #fff;
+        transition:.3s
+    }
+    header .bannerContainer #left_side_banner>div>div .appStores:hover{
+        background: none;
+        border: 2px solid #fff;
+        color:#fff;
+        box-shadow:none;
     }
     .appStores>div{
         margin-left:8px
@@ -209,7 +224,10 @@
         } 
         nav>div:nth-child(2){
             width:600px;
-        }  
+        } 
+        header .bannerContainer {
+            width:970px;
+        }
     }
     @media (min-width: 768px) and (max-width: 991px) { 
         .container main{
