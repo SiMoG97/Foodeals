@@ -1,7 +1,11 @@
    *{
     font-family: 'Ubuntu', sans-serif;
-    box-sizing: border-box
+    box-sizing: border-box;
+    /* transition:1s */
    } 
+   .positionFixed{
+       position:fixed;
+   }
    ul{
         list-style: none;
     }
@@ -14,7 +18,8 @@
     .container {
         background-image:url('../img/header-BG.png') ;
         background-repeat: no-repeat;
-        background-size: 100% 100%;  
+        background-size: 100% 900px;  
+        overflow:hidden 
     }
     .container main{
         width:1170px; 
@@ -37,7 +42,8 @@
         display:flex;
         justify-content: space-between;
         align-items: center ;
-        margin: 0 auto
+        margin: 0 auto;
+        width:1170px;
     }
     nav>div:nth-child(2){
         display:flex;
@@ -175,7 +181,7 @@
     }
 
     header #right_side_banner{
-        margin-top: 55px;
+        margin-top: 105px;
         background:#fff;
         width:527px;
         display:flex;
@@ -211,10 +217,14 @@
     header #right_side_banner span:nth-child(2){
         text-decoration: line-through;
      }
-     
-
-
     
+
+
+
+
+
+
+
     @media (min-width: 992px) and (max-width: 1199px) { 
         .container main{
             width:970px; 
@@ -228,6 +238,10 @@
         header .bannerContainer {
             width:970px;
         }
+        header nav{
+            width:970px;
+        }
+       
     }
     @media (min-width: 768px) and (max-width: 991px) { 
         .container main{
@@ -238,7 +252,43 @@
         } 
         nav>div:nth-child(2){
             width:500px;
-        }  
+        }
+        header .bannerContainer {
+            width:750px;
+            flex-direction:column;
+            padding-top:30px
+        }
+        header .bannerContainer #left_side_banner{
+            width:100%;
+            margin-bottom: 50px;
+            display:flex;
+            justify-content: space-between;
+        }
+        header .bannerContainer #left_side_banner>div:nth-child(2){
+            display:flex;
+            flex-direction: column;
+            align-items: flex-end
+        }
+        header .bannerContainer #left_side_banner>div>div{
+            display:flex;
+            flex-direction: column;
+            align-items: flex-end
+        }
+        #left_side_banner>div>div div.appStores:nth-child(1){
+            margin:0;
+            margin-bottom: 30px;
+        }
+        header .bannerContainer #left_side_banner>div h3{
+            align-self: flex-start
+        }
+        header #right_side_banner{
+            width:100%;
+            margin-bottom:120px
+        }
+        header #right_side_banner>div>img{
+            width:400px;
+            transform: translateX(10px) translateY(-130px);
+        }
      }
     
      @media (max-Width :767px){
@@ -247,7 +297,10 @@
          }
         .container main{
             width:auto; 
-            padding:10px
+            padding:20px 10px
+        }
+        header .bannerContainer #left_side_banner h1{
+            font-size:30px
         }
         nav>div:nth-child(2){
             display:none;
@@ -258,7 +311,7 @@
             transition:.3s;
             z-index:50;
             position: absolute;
-            top: 4%;
+            top: 10px;
             left: calc(50% - 81px);
         }  
         main header ul{
@@ -275,8 +328,9 @@
         nav>svg{
             position: absolute;
             right:10px;
-            top:10px;
-            transition:.3s
+            top:20px;
+            transition:.3s;
+            z-index:20
         }
         nav svg{
             display:block;
@@ -306,4 +360,190 @@
         header nav {
             align-items: stretch;
         }
+        header .bannerContainer {
+            width:auto;
+            flex-direction:column;
+            padding-top:30px
+        }
+        header .bannerContainer #left_side_banner>div>div{
+            justify-content: space-around
+        }
+        header .bannerContainer #left_side_banner{
+            width:auto
+        }
+        #left_side_banner>div>div div.appStores:nth-child(1){
+            margin-right:0
+        }
+        header .bannerContainer #left_side_banner>div>div .appStores{
+            width:145px;
+            padding: 8px 5px;
+        }
+        #left_side_banner>div>div .appStores h5{
+            font-size:14px;
+        }
+        header #right_side_banner{
+            position:relative;
+            width: calc(100% - 20px);
+            margin: auto;
+            margin-bottom:120px;
+            height:150px
+        }
+        header #right_side_banner>div>img{
+            position:absolute;
+            top: -46px;
+            right: -54px;
+            width: 240px;
+            transform:none;
+        }
+        header #right_side_banner>div:nth-child(1)>h2{
+            width:180px;
+            font-size:19px;
+            margin:0
+        }
+        header #right_side_banner>div:nth-child(1) {
+            margin: 15px 0 0 15px;
+        }
+        header #right_side_banner>div:nth-child(1)>p{
+            width:150px;
+            font-size:10px
+        }
      }
+     @media (max-Width :350px){
+        header .bannerContainer #left_side_banner>div>div{
+            flex-direction: column;
+            /* align-content: center */
+            /* align-items: center */
+        }
+        #left_side_banner>div>div div.appStores:nth-child(1){
+            margin-bottom:15px
+        }
+        header .bannerContainer #left_side_banner h1 {
+            font-size: 29px;
+        }
+        header .bannerContainer #left_side_banner p {
+            width: 300px;
+            font-size:14px
+        }
+     }
+
+.comCaMarchPart{
+    padding:50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around
+}
+.comCaMarchPart>div{
+    display:flex;
+    width:100%;
+    justify-content: space-around
+}
+.comCaMarchPart input[type="radio"]{
+    display:none;
+    
+}
+.comCaMarchPart>h1{
+    font-weight: 400;
+    margin-bottom: 120px
+}
+.comCaMarchPart #comCaMarchPartLeft{
+    width:300px;
+}
+.comCaMarchPart #comCaMarchPartLeft>div{
+    width:40px;
+    margin:35px 10px;
+    fill:#39d1a0
+}
+.comCaMarchPart #comCaMarchPartLeft label svg{
+    margin:0 10px 5px;
+    fill:#39d1a0
+}
+.comCaMarchPart #comCaMarchPartLeft>div:nth-child(1) label svg,
+.comCaMarchPart #comCaMarchPartLeft>div:nth-child(2) label svg{
+    width:30px;
+
+}
+
+.comCaMarchPart #comCaMarchPartLeft>div:nth-child(3) label svg,
+.comCaMarchPart #comCaMarchPartLeft>div:nth-child(4) label svg{
+    width:40px;
+    height:40px;
+    margin-bottom:0
+}
+
+.comCaMarchPart #comCaMarchPartLeft label>div{
+    display:flex;
+    align-items: center;
+    border-radius:50px;
+    margin:20px 0;
+    padding:10px 25px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width:260px;
+    height:60px;
+    font-weight: 900;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    text-transform: uppercase;
+    color:#2f2f2f;
+    cursor:pointer;
+    transition: .3s;
+}
+.comCaMarchPart #comCaMarchPartLeft label>div:hover{
+    transform:scale(1.05);
+    box-shadow: 0 1px 10px 0 #298c6c50, 0 1px 10px 1px #298c6c50;
+
+}
+.comCaMarchPart #comCaMarchPartLeft label>div div:nth-child(1){
+    color:#39d1a0;
+    font-weight: 500
+}
+.comCaMarchPart #comCaMarchPartLeft input[type="radio"]:checked+label>div{
+    background: linear-gradient(45deg,#37D0A0,#30C6B7);
+    color:#fff !important;
+    box-shadow: none
+}
+.comCaMarchPart #comCaMarchPartLeft input[type="radio"]:checked+label>div:hover{
+    transform:scale(1);
+}
+.comCaMarchPart #comCaMarchPartLeft input[type="radio"]:checked+label>div svg{
+    fill:#fff !important
+}
+
+.comCaMarchPart #comCaMarchPartLeft input[type="radio"]:checked+label>div div:nth-child(1){
+    color:#fff 
+}
+.comCaMarchPart #comCaMarchPartRight{
+    display:flex;
+    width:700px;
+    justify-content: space-around;
+    padding-top:20px;
+    transition: .3s;
+}
+.comCaMarchPart #comCaMarchPartRight>div:nth-child(2) h1:nth-child(1){
+    color:#39d1a0;
+}
+
+.comCaMarchPart #comCaMarchPartRight>div:nth-child(2) img{
+    width:60px
+}
+.comCaMarchPart #comCaMarchPartRight>div:nth-child(1) img{
+    height:365px;
+}
+.comCaMarchPart #comCaMarchPartRight>div:nth-child(2){
+    width:400px
+}
+.comCaMarchPart #comCaMarchPartRight h1{
+    text-transform: uppercase
+}
+#commeCaTitle{
+    animation: anime 1s 1;
+
+}
+@keyframes anime {
+    0%{
+        opacity: 0
+    }
+    100%{
+        opacity: 1
+    }
+}
