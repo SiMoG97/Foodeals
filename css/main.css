@@ -38,12 +38,62 @@
     .container main header ul a{
         color:black;
     }
+    #navContainer{
+        z-index:49
+    }
     header nav{
         display:flex;
         justify-content: space-between;
         align-items: center ;
         margin: 0 auto;
         width:1170px;
+    }
+    .navScrollDown{
+        position:fixed;
+        background-color:#fff;
+        transition:.3s;
+        top:0;
+        padding:10px 0;
+        animation: scrolldown .3s 1 forwards;
+        left:0;
+        padding:10px 10px;
+        width:100vw;
+        box-shadow:0px 5px 30px #9a9a9a69;
+        border-bottom:#39d1a0 solid 1px 
+    }
+    .navFixedScrollUp{
+       position:fixed;
+       background-color:#fff;
+       transition:.3s;
+       top:0;
+       left:0;
+       padding:10px 10px;
+       width:100vw;
+       animation: scrollUp .3s 1;
+       box-shadow:0px 5px 30px #9a9a9a69;
+       border-bottom:#39d1a0 solid 1px 
+    }
+    @keyframes scrollUp{
+        0%{
+            transform: translateY(-70px);
+        }
+        100%{
+            transform: translate(0);
+        }
+    }
+    @keyframes scrolldown{
+        0%{
+            transform: translateY(0);
+        }
+        100%{
+            transform: translateY(-70px);
+        }
+    }
+    .partnerStyleOnSCroll{
+        background: linear-gradient(45deg,#37D0A0,#30C6B7)!important ;
+        border-color: #39d1a0 !important;
+        color: white !important;
+        box-shadow:none !important;
     }
     nav>div:nth-child(2){
         display:flex;
@@ -295,6 +345,9 @@
      }
     
      @media (max-Width :767px){
+        .container {
+            width:100vw
+        }
          body{
              overflow-x:hidden
          }
@@ -303,7 +356,7 @@
             padding:20px 10px
         }
         header nav{
-            width:100%;
+            width:auto;
         }
         header .bannerContainer #left_side_banner h1{
             font-size:30px

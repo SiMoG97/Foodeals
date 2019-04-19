@@ -70,14 +70,27 @@ function navTabFunc(event){
 }
 
 /* scroll fix navbar */ 
-
+let navContainer = document.getElementById('navContainer'); 
+let partnerButton = document.getElementById('partnerButton');
+let Y=0;
+let count=0;
 function scrollFixNav(){
     if(window.innerWidth>767){
-        console.log(window.innerWidth);
+        console.log(document.getElementsByTagName('nav')[0].classList);
+        if(window.scrollY >= 80){
+            if(window.scrollY>Y){
+                Y=window.scrollY;
+                navContainer.classList.remove('navFixedScrollUp');
+                navContainer.classList.add('navScrollDown');
+                partnerButton.classList.add('partnerStyleOnSCroll');
+            }else{
+                Y=window.scrollY;
+                navContainer.classList.add('navFixedScrollUp');
+            }
+        }else{
+            navContainer.classList.remove('navFixedScrollUp');
+            navContainer.classList.remove('navScrollDown');
+            partnerButton.classList.remove('partnerStyleOnSCroll');
+        }
     }
-    if(window.scrollY >= 80){
-        // document.getElementsByTagName('nav')[0].classList.add('positionFixed');
-    }
-    // console.log(document.body.scrollTop)
-    
 }   
