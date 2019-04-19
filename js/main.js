@@ -72,7 +72,9 @@ function navTabFunc(event){
 /* scroll fix navbar */ 
 
 function scrollFixNav(){
-    console.log(window.innerWidth);
+    if(window.innerWidth>767){
+        console.log(window.innerWidth);
+    }
     if(window.scrollY >= 80){
         // document.getElementsByTagName('nav')[0].classList.add('positionFixed');
     }

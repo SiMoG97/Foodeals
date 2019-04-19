@@ -250,6 +250,9 @@
         .container main header ul {
             width: 280px;
         } 
+        header nav{
+            width:750px;
+        }
         nav>div:nth-child(2){
             width:500px;
         }
@@ -298,6 +301,9 @@
         .container main{
             width:auto; 
             padding:20px 10px
+        }
+        header nav{
+            width:100%;
         }
         header .bannerContainer #left_side_banner h1{
             font-size:30px
