@@ -95,6 +95,17 @@
         color: white !important;
         box-shadow:none !important;
     }
+    .partnerStyleOnSCroll:hover{
+        background: white!important ;
+        border-color: #39d1a0 !important;
+        color: #39d1a0 !important;
+    }
+    .navScrollDown>nav>div:nth-child(2)>ul a:hover{
+        color:#39d1a0;
+    }
+    .navScrollDown>nav>div:nth-child(2)>ul a:hover:after{
+        background:#39d1a0
+    }
     nav>div:nth-child(2){
         display:flex;
         justify-content: space-between;
@@ -380,7 +391,11 @@
             padding:0;
             width: 100% !important;
         }
-
+        nav>div:nth-child(2)>a{
+            color:white;
+            background: linear-gradient(45deg,#37D0A0,#30C6B7);
+            box-shadow:none;
+        }
         main header ul li{
             padding:30px 0;
         }
@@ -605,4 +620,90 @@
     100%{
         opacity: 1
     }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .comCaMarchPart #comCaMarchPartRight{
+        justify-content: center;
+    }
+    .comCaMarchPart #comCaMarchPartRight>div:nth-child(2){
+        width:280px;
+        margin-left:20px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+    .comCaMarchPart>div{
+        justify-content: space-between;
+    }
+    .comCaMarchPart #comCaMarchPartRight{
+        justify-content: flex-end;
+    }
+    .comCaMarchPart #comCaMarchPartRight>div:nth-child(2){
+        width:200px;
+        margin-left:20px;
+    }
+    .comCaMarchPart #comCaMarchPartRight h1{
+        font-size:23px
+    }
+    .comCaMarchPart #comCaMarchPartRight>div:nth-child(2) p{
+        font-size:10px
+    }
+    .comCaMarchPart #comCaMarchPartRight>div:nth-child(2) img{
+        width:50px
+    }
+}
+
+@media (max-Width :767px){
+    .comCaMarchPart>div{
+        flex-direction: column;
+    }
+    .comCaMarchPart{
+        width:auto
+    }
+    .comCaMarchPart #comCaMarchPartLeft{
+        display: flex;
+        justify-content: space-around;
+        margin:0 auto
+    }
+    .comCaMarchPart #comCaMarchPartLeft label>div{
+        width:60px;
+        height:60px;
+        align-items: center;
+        justify-content: center;
+        padding: 5px
+    }
+    .commentCaMarchText_display_none{
+        display:none;
+    }
+    .comCaMarchPart>h1{
+        font-size: 30px;
+        margin-bottom:30px
+    }
+    .comCaMarchPart #comCaMarchPartLeft>div{
+        width:60px
+    }
+    .comCaMarchPart #comCaMarchPartRight{
+        width:auto;
+        height:255px
+    }
+    .comCaMarchPart #comCaMarchPartRight>div:nth-child(2){
+        margin-left:20px
+    }
+    .comCaMarchPart #comCaMarchPartRight h1{
+        font-size:18px
+    }
+    .comCaMarchPart #comCaMarchPartRight p{
+        font-size:10.8px;
+        line-height: 18px
+    }
+    .comCaMarchPart #comCaMarchPartRight>div:nth-child(2) img{
+        width:30px
+    }
+    .comCaMarchPart #comCaMarchPartRight>div:nth-child(1) img{
+        height:230px
+    }
+    .comCaMarchPart #comCaMarchPartRight>div:nth-child(2){
+        width:auto
+    }
+    /* .comCaMarchPart #comCaMarchPartLeft label>div */
 }

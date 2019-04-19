@@ -93,4 +93,12 @@ function scrollFixNav(){
             partnerButton.classList.remove('partnerStyleOnSCroll');
         }
     }
-}   
+} 
+
+function removeClasses(){
+    if(window.innerWidth<768){
+        navContainer.classList.remove('navFixedScrollUp');
+        navContainer.classList.remove('navScrollDown');
+        partnerButton.classList.remove('partnerStyleOnSCroll');
+    }  
+}
