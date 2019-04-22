@@ -1,10 +1,27 @@
    *{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     /* transition:1s */
    } 
-   .positionFixed{
-       position:fixed;
+   ::-webkit-scrollbar {
+    width: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fff; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg,#37D0A0,#30C6B7);
+    border-left:1px solid #fff;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg,rgb(50, 190, 146),rgb(45, 189, 174));
+  }   
+  
+  /* scrollBat style end */
+   .positionPreventScrolling{
+       /* position:fixed; */
+       overflow: hidden;
+       /* position: absolute */
    }
    ul{
         list-style: none;
@@ -220,13 +237,16 @@
     .appStores>div{
         margin-left:8px
     }
+    #left_side_banner>div:nth-child(2)>div>a{
+        color:#2f2f2f 
+    }
     #left_side_banner>div>div div.appStores:nth-child(1){
         margin-right:30px;
     }
     #left_side_banner>div>div div.appStores:nth-child(1) img{
         width:30px;   
     }
-    #left_side_banner>div>div div.appStores:nth-child(2) img{
+    #left_side_banner>div:nth-child(2)>div>a:nth-child(2) img{
         width:25px;
         margin-left:5px
         
@@ -380,10 +400,14 @@
             flex-direction: column;
             transition:.3s;
             z-index:50;
-            position: absolute;
+            position: fixed;
             top: 10px;
             left: calc(50% - 81px);
         }  
+        .partnerMobileScroll{
+            color:#37D0A0 !important;
+            background: #fff !important;
+        }
         main header ul{
             flex-direction: column;
             justify-content: center;
@@ -400,7 +424,7 @@
             padding:30px 0;
         }
         nav>svg{
-            position: absolute;
+            position: fixed;
             right:10px;
             top:20px;
             transition:.3s;
@@ -415,6 +439,15 @@
             cx:30px;
             cy:30px;
             position: absolute;
+        }
+        .changeBurgerColor{
+            background:#fff !important;
+        }
+        .changeBurgerColor:after{
+            background:#fff !important;
+        }
+        .changeBurgerColor:before{
+            background:#fff !important;
         }
         nav>div:nth-child(3){
             width:138px;

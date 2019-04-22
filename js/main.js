@@ -5,10 +5,10 @@ let body = document.getElementsByTagName('body')[0];
 
 burger.addEventListener('click',()=>{
     menu_BG.classList.toggle('burger_Clicked');
-    burger.classList.toggle('is-active')
+    burger.classList.toggle('is-active');
     menu_nav.classList.toggle('ShowMenu');
     setTimeout(()=>menu_nav.classList.toggle('oppacityMenuNav'),100);
-    body.classList.toggle('positionFixed');
+    body.classList.toggle('positionPreventScrolling');
 })
 
 
@@ -51,6 +51,10 @@ let commeCaContent = document.getElementById('commeCaContent');
 let comCaMarchPartRight = document.getElementById('comCaMarchPartRight');
 
 
+function newFunction() {
+    console.log(burger);
+}
+
 function navTabFunc(event){
     if(event.target.tagName == "INPUT"){
         for( let i = 0 ; i < radioTabs.length ; i++ ){
@@ -69,6 +73,7 @@ function navTabFunc(event){
     }
 }
 
+
 /* scroll fix navbar */ 
 let navContainer = document.getElementById('navContainer'); 
 let partnerButton = document.getElementById('partnerButton');
@@ -76,7 +81,7 @@ let Y=0;
 let count=0;
 function scrollFixNav(){
     if(window.innerWidth>767){
-        console.log(document.getElementsByTagName('nav')[0].classList);
+        
         if(window.scrollY >= 80){
             if(window.scrollY>Y){
                 Y=window.scrollY;
@@ -91,8 +96,18 @@ function scrollFixNav(){
             navContainer.classList.remove('navFixedScrollUp');
             navContainer.classList.remove('navScrollDown');
             partnerButton.classList.remove('partnerStyleOnSCroll');
-        }
+        } 
     }
+    if(window.scrollY >= 770){
+        document.getElementById('burgerCircle').style.fill = '#39d1a0';
+        document.getElementsByClassName('hamburger-inner')[0].classList.add('changeBurgerColor');
+        document.getElementById('partnerButton').classList.add('partnerMobileScroll');
+    }else{
+        document.getElementById('burgerCircle').style.fill = '#fff';
+        document.getElementsByClassName('hamburger-inner')[0].classList.remove('changeBurgerColor');
+        document.getElementById('partnerButton').classList.remove('partnerMobileScroll');
+    }
+    console.log(window.scrollY);
 } 
 
 function removeClasses(){
