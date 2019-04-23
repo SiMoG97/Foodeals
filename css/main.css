@@ -891,7 +891,8 @@
     }
     @media (max-Width :767px){
         #testimoialsContainer{
-            padding:20px 0
+            padding:20px 0;
+            height:auto
         }
         .testimony-item {
             background-size: 100%;
@@ -953,13 +954,59 @@
 /* Trusted us part start here */
 
 #trustedUs{
-    height:400px;
+    /* height:900px; */
     width:100%;
-    /* background:red; */
-    text-align: center
+    text-align: center;
+    padding:30px 0
+}
+#trustedUs>h1{
+    font-weight:400;
+    margin:40px 0
 }
 #trustedUs>div{
     width:1170px;
-    margin:0 auto
+    margin:50px auto;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
 }
-  
+#trustedUs>div div svg{
+    width:100px !important;
+    height:100px !important
+}
+#trustedUs>div div svg {
+    cursor:pointer
+}
+#trustedUs>div div svg path{
+    transition: fill .3s;
+    fill:#acacac !important;  
+} 
+#trustedUs>div div svg:hover path{
+    fill:#33cab1 !important;
+} 
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    #trustedUs>div{
+        width:970px;  
+    }
+ }
+ @media (min-width: 768px) and (max-width: 991px) { 
+    #trustedUs>div{
+        width: 750px;
+    }
+}
+
+@media (max-Width :767px){
+    #trustedUs>div{
+        width: auto;
+        padding:20px
+    }
+    #trustedUs>div div{
+        overflow:hidden
+    }
+    #trustedUs>div div svg{
+        width:50px !important;
+        height:50px !important
+    }
+}
