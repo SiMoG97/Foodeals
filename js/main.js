@@ -79,6 +79,7 @@ let navContainer = document.getElementById('navContainer');
 let partnerButton = document.getElementById('partnerButton');
 let Y=0;
 let count=0;
+let foodLogo = document.getElementById('logo');
 function scrollFixNav(){
     if(window.innerWidth>767){
         
@@ -88,6 +89,7 @@ function scrollFixNav(){
                 navContainer.classList.remove('navFixedScrollUp');
                 navContainer.classList.add('navScrollDown');
                 partnerButton.classList.add('partnerStyleOnSCroll');
+                foodLogo.classList.add('logoStyle')
             }else{
                 Y=window.scrollY;
                 navContainer.classList.add('navFixedScrollUp');
@@ -96,6 +98,7 @@ function scrollFixNav(){
             navContainer.classList.remove('navFixedScrollUp');
             navContainer.classList.remove('navScrollDown');
             partnerButton.classList.remove('partnerStyleOnSCroll');
+            foodLogo.classList.remove('logoStyle')
         } 
     }
     if(window.scrollY >= 770){
