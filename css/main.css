@@ -940,8 +940,8 @@
         .testimony-item .testimony-social-media{
             display:flex;
             opacity: 1;
-            left: -45px;
-            top: 5px;
+            left: -55px;
+            top: 10px;
             width:70px
         }
     }
