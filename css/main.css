@@ -378,7 +378,8 @@
     
      @media (max-Width :767px){
         .container {
-            width:100vw
+            width:100vw;
+            background-image:url('../img/BG-mobile.png') ;
         }
          body{
              overflow-x:hidden
