@@ -494,7 +494,7 @@
             position:relative;
             width: calc(100% - 20px);
             margin: auto;
-            margin-bottom:120px;
+            margin-bottom:0px;
             height:150px
         }
         header #right_side_banner>div>img{
