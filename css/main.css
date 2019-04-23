@@ -946,5 +946,20 @@
             width:70px
         }
     }
-  /*# sourceMappingURL=style.css.map */
+
+
+
+
+/* Trusted us part start here */
+
+#trustedUs{
+    height:400px;
+    width:100%;
+    /* background:red; */
+    text-align: center
+}
+#trustedUs>div{
+    width:1170px;
+    margin:0 auto
+}
   
