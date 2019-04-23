@@ -937,10 +937,13 @@
         .slick-track{
             /* width:5000px !important */
         }
-        /* .testimony-item .testimony-social-media{
+        .testimony-item .testimony-social-media{
             display:flex;
             opacity: 1;
-        } */
+            left: -45px;
+            top: 5px;
+            width:70px
+        }
     }
   /*# sourceMappingURL=style.css.map */
   
