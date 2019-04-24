@@ -1126,7 +1126,11 @@ footer #footer-container .item2 li{
     padding:0 0 10px
 }
 footer #footer-container .item2 a{
-    color:#2f2f2f
+    color:#2f2f2f;
+    transition : color .3s;
+}
+footer #footer-container .item2 a:hover{
+    color:#fff
 }
 footer #footer-container .item2 .active{
     font-weight: 900
@@ -1196,4 +1200,54 @@ footer .item5 ul li{
 }
 footer .item5 ul i{
     font-size:18px;
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    footer{
+        background-size: 115% 100%;
+    }
+    footer #footer-container{
+        width:970px;   
+    }
+ }
+ @media (min-width: 768px) and (max-width: 991px) { 
+     footer{
+        background-size: 120% 100%;
+     }
+    footer #footer-container{
+        width: 750px; 
+    }
+}
+
+@media (max-Width :767px){
+    footer{
+        background-image:url(../img/bg-phone-footer.png);
+        background-repeat: no-repeat;
+        
+     }
+    footer #footer-container{
+        width: 100%;
+        padding:20px;
+        grid-template-areas:'right-top right-top'
+                            'left-top left-top'
+                            'left-bottom right-bottom'
+                            'center-bottom center-bottom';
+        padding:0 20px
+    }
+
+    footer .item4 a{
+        width:100%;
+        text-align: center;
+    }
+    footer #footer-container .item1>div{
+        justify-content: space-between;
+        width:100%
+    }
+    footer #footer-container .item1 .appStores{
+        width:152px
+    }
+    footer .item5 ul{
+        margin:0 10px 10px 0
+    }
 }
