@@ -319,6 +319,9 @@
 
 
     @media (min-width: 992px) and (max-width: 1199px) { 
+        .container{
+            background-size: 120% 900px;  
+        }
         .container main{
             width:970px; 
         }
@@ -337,6 +340,9 @@
        
     }
     @media (min-width: 768px) and (max-width: 991px) { 
+        .container{
+            background-size: 150% 900px;  
+        }
         .container main{
             width:750px; 
         }
@@ -1029,9 +1035,165 @@
 
 footer{
     width:100%;
-    height:400px;
+    padding:150px 0 15px;
     background-image:url(../img/bg-footer.png);
     background-repeat: no-repeat;
     background-size:100% 100%;
-    /* background-position-y:-300px  */
+}
+
+footer #footer-container{
+    width:1170px;
+    padding:10px 0;
+    margin:0 auto;
+    display:grid;
+    grid-gap: 10px;
+    grid-row-gap: 50px;
+    grid-template-areas:'left-top left-top . . . right-top right-top'
+                        'left-bottom left-bottom center-bottom center-bottom center-bottom right-bottom right-bottom'
+}
+footer #footer-container .item1 {grid-area: left-top;}
+footer #footer-container .item2 { grid-area: left-bottom;}
+footer #footer-container .item3 { grid-area: center-bottom;}
+footer #footer-container .item4 { grid-area: right-top;}
+footer #footer-container .item5 { grid-area: right-bottom;}
+
+
+
+footer #footer-container .item1 a{
+    color: #2f2f2f;
+}
+footer #footer-container .item1>div {
+    display:flex;
+    width:180px
+}
+footer #footer-container .item1>div>a>div {
+    padding:8px;
+}
+footer #footer-container .item1 h3{
+    color:#fff;
+    margin:12px 0;
+    padding-left:15px;
+}
+footer #footer-container .item1 h5,footer #footer-container .item1 h6{
+    margin: 0;
+}
+footer #footer-container .item1 h5{
+    font-size:17px
+}
+footer #footer-container .item1 h6{
+    font-weight: 500
+}
+footer #footer-container .item1 .appStores{
+    border-radius:50pc;
+    background:white;
+    width:170px;
+    display:flex;
+    align-items: center;
+    user-select: none;
+    border:#fff 2px solid;
+    transition: .3s;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+footer #footer-container .item1 .appStores:nth-child(1){
+    margin-right:10px;
+}
+footer #footer-container .item1 .appStores:hover{
+    background:transparent;
+    color:#fff;
+    box-shadow: none
+}
+footer #footer-container .item1 .appStores img{
+    width:25px;
+    height:25px
+}
+
+footer #footer-container .item1 .appStores .appStoresAppel{
+    width:30px;
+    height:30px
+}
+footer #footer-container .item1 .appStores .appStoresAndroid{
+    margin-left:5px
+}
+footer #footer-container .appStores>div{
+    margin-left:8px
+}
+footer #footer-container .item2 ul{
+    margin:0;
+    padding:0
+}
+footer #footer-container .item2 li{
+    
+    padding:0 0 10px
+}
+footer #footer-container .item2 a{
+    color:#2f2f2f
+}
+footer #footer-container .item2 .active{
+    font-weight: 900
+}
+
+footer .item3{
+    display:flex;
+    align-items: flex-end;
+    justify-content: center
+}
+
+footer .item3 img{
+    width:100px;
+    padding-bottom: 3px
+}
+footer .item3 h3{
+    margin:0 0 0 5px;
+    font-size:13.5px;
+    color:#fff;
+    font-weight:400
+}
+footer .item4 {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center
+}
+footer .item4 a{
+    padding:14px 50px ;
+    background: #fff;
+    border:2px solid #fff;
+    color:#30C6B7;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    border-radius: 50px;
+    margin-top: 44px !important;
+    font-weight:600;
+    transition: .3s
+}
+footer .item4 a:hover{
+   box-shadow: none;
+   background: transparent;
+   color:#fff
+}
+footer .item5 a{
+    color:#2f2f2f;
+    transition:color .3s 
+}
+footer .item5 a:hover{
+    color:#30C6B7
+}
+footer .item5 {
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end
+}
+footer .item5 ul{
+    display:flex;
+    padding:5px 0;
+    margin:0;
+    border-radius: 50px;
+    background:#fff;
+    width:120px;
+    justify-content: space-evenly;
+    align-items: center
+}
+footer .item5 ul li{
+    margin-top:3px
+}
+footer .item5 ul i{
+    font-size:18px;
 }
