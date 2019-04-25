@@ -23,7 +23,7 @@
 </head>
 
 <body onscroll="scrollFixNav()" onresize="removeClasses()">
-  <!-- <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> -->
+  <p  id="upgradeYourBrowser" style="display:none;position:fixed;bottom:0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 
   <!-- Add your site or application content here -->
   <div class="container" >
@@ -406,16 +406,16 @@
           </div>
 
           <div id="comCaMarchPartRight">
-            <div>
-              <img id="commeCaImg" src="./img/samsung1.png" alt="">
+            <div class="wow slideInRight">
+              <img id="commeCaImg"  src="./img/samsung1.png" alt="" >
             </div>
-            <div>
-              <h1 id="commeCaNumber">01</h1>
-              <div>
-                <img id="commeCaSVG" src="./img/note.svg" alt="">
+            <div >
+              <h1 id="commeCaNumber" class="wow slideInRight" >01</h1>
+              <div class="wow slideInRight" data-wow-duration="1.2s">
+                <img id="commeCaSVG"  src="./img/note.svg" alt="">
               </div>
-              <h1 id="commeCaTitle">Inscrivez-vouS</h1>
-              <p id="commeCaContent">Créez directement votre compte Foodeals, ou via la synchronisation avec vos comptes Facebook ou Gmail.</p>
+              <h1 id="commeCaTitle"  class="wow slideInRight" data-wow-duration="1.4s" >Inscrivez-vouS</h1>
+              <p id="commeCaContent" class="wow slideInRight" data-wow-duration="1.6s" >Créez directement votre compte Foodeals, ou via la synchronisation avec vos comptes Facebook ou Gmail.</p>
             </div>
           </div>
         </div>
@@ -743,6 +743,11 @@
       });
     });
 
+  </script>
+  <script>
+     if(!Modernizr.cssgrid){
+        document.getElementById('upgradeYourBrowser').classList.add('browserupgrade');
+      }
   </script>
 </body>
 

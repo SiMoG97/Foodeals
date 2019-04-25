@@ -144,6 +144,9 @@ function hideOnLeave(event){
 
 /* Draggable slide Script */
 
+// if(Modernizer.grid){
+//     console.log('nice')
+// }
 
 
 

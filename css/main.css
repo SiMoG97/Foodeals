@@ -20,7 +20,18 @@
     background: -webkit-linear-gradient(45deg,rgb(50, 190, 146),rgb(45, 189, 174));
     background: linear-gradient(45deg,rgb(50, 190, 146),rgb(45, 189, 174));
   }   
-  
+  .browserupgrade{
+      display:block !important;
+      width:100%;
+      padding:20px;
+      margin:0 auto;
+      background:#fff;
+      border-top:solid 1px #37D0A0;
+      z-index:7000
+  }
+  .browserupgrade a{
+      color:#37D0A0
+  }
   /* scrollBat style end */
    .positionPreventScrolling{
        /* position:fixed; */
@@ -843,12 +854,12 @@
 .comCaMarchPart #comCaMarchPartRight h1{
     text-transform: uppercase
 }
-#commeCaTitle{
+/* #commeCaTitle{
     -webkit-animation: anime 1s 1;
             animation: anime 1s 1;
 
-}
-@-webkit-keyframes anime {
+} */
+/* @-webkit-keyframes anime {
     0%{
         opacity: 0
     }
@@ -863,7 +874,7 @@
     100%{
         opacity: 1
     }
-}
+} */
 
 @media (min-width: 992px) and (max-width: 1199px) { 
     .comCaMarchPart #comCaMarchPartRight{
