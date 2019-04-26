@@ -82,7 +82,6 @@ let count=0;
 let foodLogo = document.getElementById('logo');
 function scrollFixNav(){
     if(window.innerWidth>767){
-        
         if(window.scrollY >= 80){
             if(window.scrollY>Y){
                 Y=window.scrollY;
@@ -101,8 +100,9 @@ function scrollFixNav(){
             foodLogo.classList.remove('logoStyle')
         } 
     }
-    if(window.scrollY >= 770){
-        document.getElementById('burgerCircle').style.fill = '#39d1a0';
+    console.log(window.scrollY);
+    if(window.scrollY >= 850){
+        document.getElementById('burgerCircle').style.fill = '#30C6B7';
         document.getElementsByClassName('hamburger-inner')[0].classList.add('changeBurgerColor');
         document.getElementById('partnerButton').classList.add('partnerMobileScroll');
     }else{
