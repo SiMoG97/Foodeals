@@ -129,24 +129,20 @@ let profilePics = document.getElementsByClassName('testimony-pic');
 let socialMediaDivs = document.getElementsByClassName('testimony-social-media');
 
 function show(event){
-    let numberOfDiv = parseInt(event.target.id[event.target.id.length - 1]);
-    socialMediaDivs[numberOfDiv - 1].style.display = 'flex ';
-    setTimeout( () => socialMediaDivs[numberOfDiv - 1].classList.add('show'),100);
+    if(window.innerWidth>768){
+        let numberOfDiv = parseInt(event.target.id[event.target.id.length - 1]);
+        socialMediaDivs[numberOfDiv - 1].style.display = 'flex ';
+        setTimeout( () => socialMediaDivs[numberOfDiv - 1].classList.add('show'),100);
+    }
+    
 }
 
 function hideOnLeave(event){
-    for(let i = 0 ; i < socialMediaDivs.length ; i++){
-        socialMediaDivs[i].classList.remove('show');
-        setTimeout( () => socialMediaDivs[i].style.display = 'none' ,100);
+    if (window.innerWidth>768){
+        for(let i = 0 ; i < socialMediaDivs.length ; i++){
+            socialMediaDivs[i].classList.remove('show');
+            setTimeout( () => socialMediaDivs[i].style.display = 'none' ,100);
+        }
     }
+    
 }
-
-
-/* Draggable slide Script */
-
-// if(Modernizer.grid){
-//     console.log('nice')
-// }
-
-
-
