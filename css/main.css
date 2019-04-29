@@ -1678,5 +1678,11 @@ footer .item5 ul i{
     #contactUs>div form input:nth-last-child(1){
         margin-bottom:25px;
     }
+    #contactUs>div form button{
+        width:100%
+    }
+    #contactUs>h1{
+        padding:0;
+    }
    
 }
