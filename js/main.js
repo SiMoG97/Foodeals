@@ -51,10 +51,6 @@ let commeCaContent = document.getElementById('commeCaContent');
 let comCaMarchPartRight = document.getElementById('comCaMarchPartRight');
 
 
-function newFunction() {
-    console.log(burger);
-}
-
 function navTabFunc(event){
     if(event.target.tagName == "INPUT"){
         for( let i = 0 ; i < radioTabs.length ; i++ ){
@@ -100,7 +96,6 @@ function scrollFixNav(){
             foodLogo.classList.remove('logoStyle')
         } 
     }
-    console.log(window.scrollY);
     if(window.scrollY >= 850){
         document.getElementById('burgerCircle').style.fill = '#30C6B7';
         document.getElementsByClassName('hamburger-inner')[0].classList.add('changeBurgerColor');
@@ -112,7 +107,7 @@ function scrollFixNav(){
     }
 } 
 
-let testimonyContainer = document.getElementsByClassName('testimony-container')[0];
+// let testimonyContainer = document.getElementsByClassName('testimony-container')[0];
 
 function removeClasses(){
     if(window.innerWidth<768){
@@ -137,7 +132,7 @@ function show(event){
     
 }
 
-function hideOnLeave(event){
+function hideOnLeave(){
     if (window.innerWidth>768){
         for(let i = 0 ; i < socialMediaDivs.length ; i++){
             socialMediaDivs[i].classList.remove('show');
