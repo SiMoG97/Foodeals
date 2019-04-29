@@ -11,6 +11,18 @@ burger.addEventListener('click',()=>{
     body.classList.toggle('positionPreventScrolling');
 })
 
+const navChoices = document.querySelectorAll('.navChoices');
+
+navChoices.forEach(navChoice =>{
+    navChoice.addEventListener('click',()=>{
+        menu_BG.classList.remove('burger_Clicked');
+        burger.classList.remove('is-active');
+        menu_nav.classList.remove('ShowMenu');
+        setTimeout(()=>menu_nav.classList.remove('oppacityMenuNav'),100);
+        body.classList.remove('positionPreventScrolling');
+    })
+});
+
 
 /* Comment Ca march Navigation tabs */
 

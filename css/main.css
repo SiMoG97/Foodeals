@@ -6,6 +6,9 @@
     outline:none;
     /* transition:1s */
    } 
+   html{
+    scroll-behavior: smooth;
+    }
    ::-webkit-scrollbar {
     width: 11px;
   }
