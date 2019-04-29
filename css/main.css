@@ -1573,3 +1573,110 @@ footer .item5 ul i{
         -ms-grid-column-span: 1
     }
 }
+
+
+/* Contact us styles start here */
+
+#contactUs{
+    width:100%;
+
+}
+#contactUs>h1{
+    font-weight:400;
+    text-align: center;
+    padding:0 0 70px
+}
+
+#contactUs>div{
+    width:1170px;
+    margin:0 auto;
+}
+#contactUs>div form{
+    display:flex;
+    flex-direction: column;
+    align-items: center
+}
+#contactUs>div form>div{
+    display:flex;
+    justify-content: center
+}
+
+#contactUs>div form input{
+    width:300px;
+    padding:12px 15px;
+    border-radius: 50px;
+    border:solid 1px rgb(214, 214, 214);
+    margin-right:20px;
+    transition: border .3s;
+}
+#contactUs>div form input:focus{
+    border:1px solid #39d1a0;
+}
+#contactUs>div form input::placeholder{
+    color:rgb(214, 214, 214)
+}
+#contactUs>div form input:nth-child(1){
+    margin-bottom:25px
+}
+#contactUs>div form textarea{
+    resize:none;
+    border-radius:27px;
+    border:solid 1px rgb(214, 214, 214);
+    padding:10px 15px;
+    transition: border .3s;
+}
+#contactUs>div form textarea::placeholder{
+    color:rgb(214, 214, 214)
+}
+#contactUs>div form textarea:focus{
+    border:1px solid #39d1a0;
+}
+#contactUs>div form button{
+    padding:10px 120px;
+    margin-top:20px;
+    border-radius:50px;
+    border:2px solid transparent;
+    background: linear-gradient(45deg,#39d1a0,rgb(45, 189, 174));
+    color:#fff;
+    font-size: 20px;
+    transition:.3s;
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+#contactUs>div form button:hover{
+    border:2px solid #39d1a0;
+    box-shadow: none;
+    color:#39d1a0;
+    background: linear-gradient(45deg,#fff,#fff);
+}
+@media (min-width: 992px) and (max-width: 1199px) { 
+    #contactUs>div{
+        width:970px;  
+    }
+ }
+ @media (min-width: 768px) and (max-width: 991px) { 
+    #contactUs>div{
+        width: 750px;
+    }
+}
+
+@media (max-Width :767px){
+    #contactUs>div{
+        width: auto;
+        padding:20px
+    }
+    #contactUs>div form>div{
+        flex-direction: column;
+        width:100%
+    }
+    #contactUs>div form{
+        width:100%;
+    }
+    #contactUs>div form input ,#contactUs>div form textarea{
+        width:100%
+    }
+    #contactUs>div form input:nth-last-child(1){
+        margin-bottom:25px;
+    }
+   
+}
