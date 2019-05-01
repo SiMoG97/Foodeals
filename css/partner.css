@@ -1,0 +1,256 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline:none;
+    /* transition:1s */
+   } 
+   html{
+    scroll-behavior: smooth;
+    }
+   ::-webkit-scrollbar {
+    width: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fff; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(45deg,#37D0A0,#30C6B7);
+    background: linear-gradient(45deg,#37D0A0,#30C6B7);
+    border-left:1px solid #fff;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: -webkit-linear-gradient(45deg,rgb(50, 190, 146),rgb(45, 189, 174));
+    background: linear-gradient(45deg,rgb(50, 190, 146),rgb(45, 189, 174));
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    /* -webkit-text-fill-color: red; */
+    background-color:red;
+
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+  }
+main#partnerMain{
+    width:1170px;
+    margin:150px auto 0;
+    /* background:red; */
+    height:500px;
+    display:flex;
+}
+main#partnerMain section{
+    width:50%;
+    height:100%
+}
+main#partnerMain #logo {
+    margin: 0 auto 20px
+}
+main#partnerMain #logo path{
+    fill:#30C6B7 
+}
+main#partnerMain #logo polygon{
+    fill:#30C6B7 
+}
+main#partnerMain section:nth-child(1){
+    /* background:yellowgreen */
+}   
+main#partnerMain section:nth-child(2){
+    position:relative;
+}
+main#partnerMain section:nth-child(2) #partnerBgContainer{
+    position:absolute;
+    top:-400px;right:-400px;
+    z-index: -1;
+}
+main#partnerMain form{ 
+    width:250px;
+    margin:0 auto;
+    padding-top:40px;
+    border-top:#30C6B7 solid 2px;
+    position:relative;
+}
+main#partnerMain form span{ 
+    width:100%;
+    border-top:#ddd solid 2px;
+    height:1px;
+    position: absolute;
+    top:-2px;right:0;
+    transition:width 1s;
+}
+
+main#partnerMain section form>div{
+    display:flex;
+    flex-direction: column
+}
+main#partnerMain section form>div>div{
+    position:relative;
+    margin:0 0 30px
+}
+
+main#partnerMain #formSecondeStep{
+    display:none;
+}
+
+main#partnerMain  input{
+    border:none;
+    border-bottom:1px solid #bbb7b7;
+    outline:none;
+    background:transparent;
+    transition:width .3s,border-color .3s;
+    padding-bottom:5px;
+    padding-left:5px;
+    font-size:16px;
+    width:250px
+  }
+  main#partnerMain label{
+    color:#bbb7b7;
+    position:absolute;
+    top:5px;left:5px;
+    font-size:13px;
+    transition:font-size .3s,top .3s ;
+    z-index:-1;
+    font-weight: 900
+  }
+  main#partnerMain input:focus{
+    border-bottom:1px solid #30C6B7;
+    width:250px;
+  }
+  main#partnerMain input:focus ~ label {
+    top:-13px;
+    /* left:0; */
+    font-size:10px;
+  }
+  main#partnerMain .activeLabel{
+    top:-13px;
+    /* left:0; */
+    font-size:10px;
+    color:#30C6B7
+  }
+  main#partnerMain .regexInput{
+    border-bottom:1px solid #f39c12 !important;
+  }
+  main#partnerMain .regexLabel{
+    color: #f39c12 !important;
+  }
+
+  main#partnerMain .activeInput{
+    border-bottom:1px solid #30C6B7;
+  }
+  #formFirstStep>div:nth-child(2) input{
+      padding-left:40px
+  }
+  #formFirstStep>div:nth-child(2) label{
+    top:0px !important;
+    font-size:13px !important
+}
+main#partnerMain button{
+    width:100%;
+    background:#30C6B7;
+    border:solid 1px #30C6B7;
+    color:#fff;
+    padding:8px;
+    border-radius:50px;
+    margin-top:20px;
+    transition:background .3s,border .3s;
+    cursor:pointer
+}
+main#partnerMain button:hover{
+    background:rgb(42, 175, 162);
+    border:solid 1px rgb(42, 175, 162);
+
+}
+#formSecondeStep>div:nth-child(3){
+    display:flex;
+}
+#formSecondeStep>div:nth-child(3)>div{
+    position:relative
+}
+#formSecondeStep>div:nth-child(3)>div:nth-child(1) input{
+    width:100px;
+    margin-right:10px
+}
+#formSecondeStep>div:nth-child(3)>div:nth-child(2) input{
+    width:140px;
+}
+main#partnerMain #submited_form{
+    display:none;
+}
+main#partnerMain #submited_form img{
+    margin:auto;
+    width:100px
+}
+main#partnerMain section:nth-child(2)>div:nth-child(2){
+    width:500px;
+    color:#fff
+}
+main#partnerMain section:nth-child(2)>div:nth-child(2) h1{
+    text-transform: uppercase
+}
+main#partnerMain section:nth-child(2)>div:nth-child(2) p{
+    font-size:14px;
+    line-height: 20px
+}
+main#partnerMain section:nth-child(2){
+    display:flex;
+    justify-content: flex-end
+}
+
+
+
+
+
+
+
+
+
+
+
+/* inscrivez vous part starts here */
+#inscrivous{
+    width:100%;
+    text-align: center;
+    padding-top:50px 
+}
+#inscrivous>h3{
+    margin-top:0
+}
+#inscrivous>h1{
+    margin-bottom:10px
+}
+
+#inscrivous>#iconContainer{
+    width:1170px;
+    margin:60px auto;
+    display:flex;
+    justify-content: center;
+}
+#inscrivous>#iconContainer>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100px;
+    padding:0 100px;
+    color:#30C6B7
+}
+#inscrivous>#iconContainer>div>div{
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    background-color:#30C6B7;
+    background: linear-gradient(45deg,#37D0A0,#30C6B7) ;
+    display:flex;
+    justify-content: center;
+    align-items: center
+}
+#inscrivous>#iconContainer>div svg{
+    width:40px;height:40px
+}
