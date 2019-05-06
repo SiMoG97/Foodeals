@@ -109,7 +109,7 @@ function scrollFixNav(){
             foodLogo.classList.remove('logoStyle')
         } 
     }
-    if(window.scrollY >= 850){
+    if(window.scrollY >= 475){
         document.getElementById('burgerCircle').style.fill = '#30C6B7';
         document.getElementsByClassName('hamburger-inner')[0].classList.add('changeBurgerColor');
         document.getElementById('partnerButton').classList.add('partnerMobileScroll');

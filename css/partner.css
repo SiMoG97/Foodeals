@@ -193,6 +193,9 @@ main#partnerMain button:hover{
     border:solid 1px rgb(42, 175, 162);
 
 }
+main#partnerMain section:nth-child(2) #partnerBgContainer img:nth-child(2){
+    display:none
+}
 #formSecondeStep>div:nth-child(3){
     display:flex;
 }
@@ -246,7 +249,8 @@ main#partnerMain section:nth-child(2){
      main#partnerMain section h1{
          font-size:26px;
      }
-     main#partnerMain section:nth-child(2) #partnerBgContainer img{
+     
+     main#partnerMain section:nth-child(2) #partnerBgContainer img:nth-child(1){
          right: -330px;
          top: -220px;
          width: 850px;
@@ -277,8 +281,9 @@ main#partnerMain section:nth-child(2){
 }
 @media (max-Width :767px){
     main#partnerMain{
-        padding:20px 50px;
-        width:auto
+        padding:20px 10px;
+        width:auto;
+        margin-bottom: 500px
     }
     main#partnerMain section:nth-child(1){
         width:100%
@@ -288,11 +293,20 @@ main#partnerMain section:nth-child(2){
     }
     main#partnerMain section h1{
         color:#fff;
-        /* margin-bottom:500px */
+        margin-bottom:350px;
+        font-weight:400;
+        font-size: 30px;
+        text-align: left;
         /* padding-bottom: 100px */
     }
-    main#partnerMain section:nth-child(2) #partnerBgContainer img{
-        width:800px
+    main#partnerMain section:nth-child(2) #partnerBgContainer img:nth-child(1){
+        display: none;
+    }
+    main#partnerMain section:nth-child(2) #partnerBgContainer img:nth-child(2){
+        display:block;
+        width:900px;
+        top: -290px;
+        right: -390px;     
     }
     #inscrivous{
         /* padding-top:300px */
@@ -312,7 +326,7 @@ main#partnerMain section:nth-child(2){
 #inscrivous{
     width:100%;
     text-align: center;
-    padding-top:50px 
+    /* padding-top:50px  */
 }
 #inscrivous>h3{
     margin-top:0;
@@ -388,5 +402,14 @@ main#partnerMain section:nth-child(2){
     }
     #inscrivous>#iconContainer>div{
         padding:50px
+    }
+    #inscrivous>#iconContainer{
+        padding:0;
+    }
+    #inscrivous>#iconContainer>div{
+        padding:0;
+    }
+    #trustedUs{
+        padding:0;
     }
 }
