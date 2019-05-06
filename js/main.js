@@ -3,6 +3,7 @@ let menu_BG = document.getElementById('menu-BG');
 let menu_nav = document.getElementById('menu-nav');
 let body = document.getElementsByTagName('body')[0];
 
+
 burger.addEventListener('click',()=>{
     menu_BG.classList.toggle('burger_Clicked');
     burger.classList.toggle('is-active');
@@ -153,3 +154,4 @@ function hideOnLeave(){
     }
     
 }
+
