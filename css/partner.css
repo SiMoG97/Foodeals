@@ -41,7 +41,9 @@
   }
 main#partnerMain{
     width:1170px;
-    margin:150px auto 0;
+    /* margin:150px auto 0; */
+    margin:0px auto 100px;
+
     /* background:red; */
     height:500px;
     display:flex;
@@ -63,12 +65,19 @@ main#partnerMain section:nth-child(1){
     /* background:yellowgreen */
 }   
 main#partnerMain section:nth-child(2){
-    position:relative;
+    /* position:relative; */
 }
 main#partnerMain section:nth-child(2) #partnerBgContainer{
-    position:absolute;
-    top:-400px;right:-400px;
+    position:relative;
+    /* top:-400px;right:-400px; */
     z-index: -1;
+}
+main#partnerMain section:nth-child(2) #partnerBgContainer img{
+    position:absolute;
+    /* top:-400px; */
+    top:-240px;
+    right:-450px;
+    width:1000px
 }
 main#partnerMain form{ 
     width:250px;
@@ -77,19 +86,34 @@ main#partnerMain form{
     border-top:#30C6B7 solid 2px;
     position:relative;
 }
+main#partnerMain form h3{
+    padding: 0 10px;
+    text-align: center;
+    color:#fff;
+}
 main#partnerMain form span{ 
     width:100%;
     border-top:#ddd solid 2px;
     height:1px;
     position: absolute;
     top:-2px;right:0;
-    transition:width 1s;
+    transition:width 1000ms , height 300ms;
 }
 
 main#partnerMain section form>div{
     display:flex;
     flex-direction: column
 }
+main#partnerMain section h1{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #30C6B7;
+    margin: 70px 0;
+    text-align: center;
+    font-size: 32px;
+}
+
+
 main#partnerMain section form>div>div{
     position:relative;
     margin:0 0 30px
@@ -140,7 +164,9 @@ main#partnerMain  input{
   main#partnerMain .regexLabel{
     color: #f39c12 !important;
   }
-
+  main#partnerMain .inputBorderonClick{
+    border-bottom:1px solid red;
+  }
   main#partnerMain .activeInput{
     border-bottom:1px solid #30C6B7;
   }
@@ -185,7 +211,17 @@ main#partnerMain #submited_form{
 }
 main#partnerMain #submited_form img{
     margin:auto;
-    width:100px
+    width:100px;
+    transform: scale(0);
+    opacity: 0;
+    transition:  cubic-bezier(.18,.36,.67,1.54) 500ms;
+
+}
+main#partnerMain #submited_form img.imgScale{
+    margin:auto;
+    width:100px;
+    transform: scale(1) !important;
+    opacity: 1;
 }
 main#partnerMain section:nth-child(2)>div:nth-child(2){
     width:500px;
@@ -220,10 +256,12 @@ main#partnerMain section:nth-child(2){
     padding-top:50px 
 }
 #inscrivous>h3{
-    margin-top:0
+    margin-top:0;
+    font-weight: 400;
 }
 #inscrivous>h1{
-    margin-bottom:10px
+    margin-bottom:10px;
+    font-weight: 400;
 }
 
 #inscrivous>#iconContainer{
@@ -240,6 +278,17 @@ main#partnerMain section:nth-child(2){
     width:100px;
     padding:0 100px;
     color:#30C6B7
+}
+#inscrivous img{
+    transform:scale(0);
+}
+#progressiveSpan.widthSpan{
+    background-color : #30C6B7 ;
+    border-top : #30C6B7 ;
+    width:100% !important;
+    height:0;
+    transition:width 0ms, height 300ms;
+    z-index:-1;
 }
 #inscrivous>#iconContainer>div>div{
     width:80px;
