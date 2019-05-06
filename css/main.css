@@ -312,13 +312,20 @@
         color:#535353;
         width:335px;
         line-height: 25px;
+        margin:0;
     }
+    
     header .bannerContainer #left_side_banner>div{
-        margin-top:80px;
+        margin-top:30px;
+    }
+    header .bannerContainer #left_side_banner>div:nth-child(1){
+        margin-top:20px
     }
     header .bannerContainer #left_side_banner>div h3{
         color:#fff;
         margin:12px 0;
+        font-weight:500;
+        letter-spacing: 1px;
         padding-left:15px;
     }
     header .bannerContainer #left_side_banner>div>div{
@@ -495,6 +502,7 @@
         header .bannerContainer #left_side_banner>div h3{
             -ms-flex-item-align: start;
                 align-self: flex-start;
+                
 
         }
         header #right_side_banner{
@@ -516,12 +524,12 @@
           #home-bg-container>img:nth-child(2){
             display:block;
             position: absolute;
-            top: -370px;
-            width: 700px;
-            left: -180px;
+            top: -470px;
+            width: 600px;
+            left: -130px;
           }
           header{
-              margin-bottom:250px
+              margin-bottom:120px
           }
          body{
              overflow-x:hidden
@@ -648,7 +656,7 @@
         }
         header .bannerContainer #left_side_banner>div>div{
             -ms-flex-pack: distribute;
-                justify-content: space-around
+                justify-content: space-between
         }
         header .bannerContainer #left_side_banner{
             width:auto
@@ -657,7 +665,7 @@
             margin-right:0
         }
         header .bannerContainer #left_side_banner>div>div .appStores{
-            width:145px;
+            width:155px;
             padding: 8px 5px;
         }
         #left_side_banner>div>div .appStores h5{
