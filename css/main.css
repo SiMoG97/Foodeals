@@ -516,9 +516,9 @@
           #home-bg-container>img:nth-child(2){
             display:block;
             position: absolute;
-            top: -450px;
-            width: 770px;
-            left: -200px;
+            top: -370px;
+            width: 700px;
+            left: -180px;
           }
           header{
               margin-bottom:250px
