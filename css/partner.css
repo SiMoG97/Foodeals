@@ -45,7 +45,7 @@
 main#partnerMain{
     width:1170px;
     /* margin:150px auto 0; */
-    margin:0px auto 100px;
+    margin:0px auto 250px;
 
     /* background:red; */
     height:500px;
@@ -56,7 +56,8 @@ main#partnerMain section{
     height:100%
 }
 main#partnerMain #logo {
-    margin: 0 auto 20px
+    margin: 0 auto 20px ;
+    /* cursor:pointer */
 }
 main#partnerMain #logo path{
     fill:#30C6B7 
