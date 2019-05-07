@@ -42,7 +42,6 @@ let step= 0;
 let inputstep = 3;
 let emptyField = 0;
 let validInput = 3;
-console.log(imageOkay);
 // let clickedCounter = 0;
 nextSbmtBtn.addEventListener('click',() =>{
     
@@ -76,10 +75,6 @@ nextSbmtBtn.addEventListener('click',() =>{
                     imageOkay.classList.add('imgScale');
                     
                 }, 700);
-                // setTimeout(()=>{
-                    
-                //     console.log('set sec');
-                // } ,1000)
                 
             }
             step = 3;

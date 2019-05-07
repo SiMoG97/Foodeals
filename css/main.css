@@ -864,29 +864,33 @@
 .comCaMarchPart #comCaMarchPartRight h1{
     text-transform: uppercase
 }
-/* #commeCaTitle{
-    -webkit-animation: anime 1s 1;
-            animation: anime 1s 1;
-
-} */
-/* @-webkit-keyframes anime {
-    0%{
-        opacity: 0
-    }
-    100%{
-        opacity: 1
-    }
+#aPropos{
+    /* width:1170px; */
+    margin:0 auto;
+    display:flex;
+    padding-top:100px;
+    justify-content: space-around
 }
-@keyframes anime {
-    0%{
-        opacity: 0
-    }
-    100%{
-        opacity: 1
-    }
-} */
 
+#aPropos>div:nth-child(1){
+    width:300px
+}
+#aPropos>div:nth-child(1)>img{
+    width:300px
+}
+#aPropos>div:nth-child(2){
+    width:600px
+}
+#aPropos>div:nth-child(2) h1{
+    font-weight:400
+}
+#aPropos>div:nth-child(2) p{
+    padding-left:50px;
+    line-height:25px;
+    font-size:15px
+}
 @media (min-width: 992px) and (max-width: 1199px) { 
+   
     .comCaMarchPart #comCaMarchPartRight{
         -webkit-box-pack: center;
             -ms-flex-pack: center;
@@ -898,6 +902,9 @@
     }
 }
 @media (min-width: 768px) and (max-width: 991px) { 
+    #aPropos{
+        padding-top:350px
+    }
     .comCaMarchPart>div{
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
@@ -924,6 +931,21 @@
 }
 
 @media (max-Width :767px){
+    #aPropos{
+        flex-direction: column
+    }
+    #aPropos>div:nth-child(1){
+        width:100%;
+        order: 2;
+        
+    }
+    #aPropos>div:nth-child(1) img{
+        width:100%
+    }
+    #aPropos>div:nth-child(2){
+        width:100%;
+        margin-bottom:30px
+    }
     .comCaMarchPart>div{
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
