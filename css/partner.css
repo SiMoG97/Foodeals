@@ -39,6 +39,9 @@
 
     -webkit-box-shadow: 0 0 0 30px #fff inset !important;
   }
+  .Partner_container{
+      overflow: hidden;
+  }
 main#partnerMain{
     width:1170px;
     /* margin:150px auto 0; */
