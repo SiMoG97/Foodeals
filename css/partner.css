@@ -49,6 +49,8 @@ main#partnerMain{
 
     /* background:red; */
     height:500px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
 }
 main#partnerMain section{
@@ -101,12 +103,19 @@ main#partnerMain form span{
     height:1px;
     position: absolute;
     top:-2px;right:0;
+    -webkit-transition:width 1000ms , height 300ms;
+    -o-transition:width 1000ms , height 300ms;
     transition:width 1000ms , height 300ms;
 }
 
 main#partnerMain section form>div{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column
 }
 main#partnerMain section h1{
     text-transform: uppercase;
@@ -132,6 +141,8 @@ main#partnerMain  input{
     border-bottom:1px solid #bbb7b7;
     outline:none;
     background:transparent;
+    -webkit-transition:width .3s,border-color .3s;
+    -o-transition:width .3s,border-color .3s;
     transition:width .3s,border-color .3s;
     padding-bottom:5px;
     padding-left:5px;
@@ -143,6 +154,8 @@ main#partnerMain  input{
     position:absolute;
     top:5px;left:5px;
     font-size:13px;
+    -webkit-transition:font-size .3s,top .3s ;
+    -o-transition:font-size .3s,top .3s ;
     transition:font-size .3s,top .3s ;
     z-index:-1;
     font-weight: 900
@@ -189,6 +202,8 @@ main#partnerMain button{
     padding:8px;
     border-radius:50px;
     margin-top:20px;
+    -webkit-transition:background .3s,border .3s;
+    -o-transition:background .3s,border .3s;
     transition:background .3s,border .3s;
     cursor:pointer
 }
@@ -201,6 +216,8 @@ main#partnerMain section:nth-child(2) #partnerBgContainer img:nth-child(2){
     display:none
 }
 #formSecondeStep>div:nth-child(3){
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
 }
 #formSecondeStep>div:nth-child(3)>div{
@@ -219,15 +236,21 @@ main#partnerMain #submited_form{
 main#partnerMain #submited_form img{
     margin:auto;
     width:100px;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
     opacity: 0;
+    -webkit-transition:  cubic-bezier(.18,.36,.67,1.54) 500ms;
+    -o-transition:  cubic-bezier(.18,.36,.67,1.54) 500ms;
     transition:  cubic-bezier(.18,.36,.67,1.54) 500ms;
 
 }
 main#partnerMain #submited_form img.imgScale{
     margin:auto;
     width:100px;
-    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+        -ms-transform: scale(1) !important;
+            transform: scale(1) !important;
     opacity: 1;
 }
 main#partnerMain section:nth-child(2)>div:nth-child(2){
@@ -242,8 +265,12 @@ main#partnerMain section:nth-child(2)>div:nth-child(2) p{
     line-height: 20px
 }
 main#partnerMain section:nth-child(2){
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: flex-end
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end
 }
 
 @media (min-width: 992px) and (max-width: 1199px) { 
@@ -344,26 +371,43 @@ main#partnerMain section:nth-child(2){
 #inscrivous>#iconContainer{
     width:1170px;
     margin:60px auto;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #inscrivous>#iconContainer>div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width:100px;
     padding:0 100px;
     color:#30C6B7
 }
 #inscrivous img{
-    transform:scale(0);
+    -webkit-transform:scale(0);
+        -ms-transform:scale(0);
+            transform:scale(0);
 }
 #progressiveSpan.widthSpan{
     background-color : #30C6B7 ;
     border-top : #30C6B7 ;
     width:100% !important;
     height:0;
+    -webkit-transition:width 0ms, height 300ms;
+    -o-transition:width 0ms, height 300ms;
     transition:width 0ms, height 300ms;
     z-index:-1;
 }
@@ -372,10 +416,18 @@ main#partnerMain section:nth-child(2){
     height:80px;
     border-radius: 50%;
     background-color:#30C6B7;
+    background: -webkit-linear-gradient(45deg,#37D0A0,#30C6B7) ;
+    background: -o-linear-gradient(45deg,#37D0A0,#30C6B7) ;
     background: linear-gradient(45deg,#37D0A0,#30C6B7) ;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center;
-    align-items: center
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
 }
 #inscrivous>#iconContainer>div svg{
     width:40px;height:40px
@@ -402,7 +454,9 @@ main#partnerMain section:nth-child(2){
         width:auto
     }
     #inscrivous>#iconContainer{
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     #inscrivous>#iconContainer>div{
         padding:50px

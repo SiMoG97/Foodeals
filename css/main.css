@@ -657,7 +657,8 @@
         }
         header .bannerContainer #left_side_banner>div>div{
             -ms-flex-pack: distribute;
-                justify-content: space-between
+                -webkit-box-pack: justify;
+                    justify-content: space-between
         }
         header .bannerContainer #left_side_banner{
             width:auto
@@ -867,9 +868,12 @@
 #aPropos{
     /* width:1170px; */
     margin:0 auto;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
     padding-top:100px;
-    justify-content: space-around
+    -ms-flex-pack: distribute;
+        justify-content: space-around
 }
 
 #aPropos>div:nth-child(1){
@@ -932,11 +936,16 @@
 
 @media (max-Width :767px){
     #aPropos{
-        flex-direction: column
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column
     }
     #aPropos>div:nth-child(1){
         width:100%;
-        order: 2;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
         
     }
     #aPropos>div:nth-child(1) img{
@@ -944,7 +953,13 @@
     }
     #aPropos>div:nth-child(2){
         width:100%;
-        margin-bottom:30px
+        margin-bottom:30px;
+    }
+    #aPropos>div:nth-child(2) h1{
+        text-align: center;
+    }
+    #aPropos>div:nth-child(2) p{
+        padding-left:0
     }
     .comCaMarchPart>div{
         -webkit-box-orient: vertical;
@@ -1329,7 +1344,7 @@ footer #footer-container{
     display:grid;
     grid-gap: 10px;
     grid-row-gap: 50px;
-        grid-template-areas:'left-top left-top . . . right-top right-top'
+            grid-template-areas:'left-top left-top . . . right-top right-top'
                         'left-bottom left-bottom center-bottom center-bottom center-bottom right-bottom right-bottom'
 }
 footer #footer-container .item1 {-ms-grid-row: 1;-ms-grid-column: 1;-ms-grid-column-span: 3;grid-area: left-top;}
@@ -1555,7 +1570,7 @@ footer .item5 ul i{
     footer #footer-container{
         width: 100%;
         padding:20px;
-            grid-template-areas:'right-top right-top'
+                grid-template-areas:'right-top right-top'
                             'left-top left-top'
                             'left-bottom right-bottom'
                             'center-bottom center-bottom';
@@ -1624,13 +1639,24 @@ footer .item5 ul i{
     margin:0 auto;
 }
 #contactUs>div form{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
-    align-items: center
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
 }
 #contactUs>div form>div{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center
 }
 
 #contactUs>div form input{
@@ -1639,10 +1665,21 @@ footer .item5 ul i{
     border-radius: 50px;
     border:solid 1px rgb(214, 214, 214);
     margin-right:20px;
+    -webkit-transition: border .3s;
+    -o-transition: border .3s;
     transition: border .3s;
 }
 #contactUs>div form input:focus{
     border:1px solid #39d1a0;
+}
+#contactUs>div form input::-webkit-input-placeholder{
+    color:rgb(214, 214, 214)
+}
+#contactUs>div form input:-ms-input-placeholder{
+    color:rgb(214, 214, 214)
+}
+#contactUs>div form input::-ms-input-placeholder{
+    color:rgb(214, 214, 214)
 }
 #contactUs>div form input::placeholder{
     color:rgb(214, 214, 214)
@@ -1655,7 +1692,18 @@ footer .item5 ul i{
     border-radius:27px;
     border:solid 1px rgb(214, 214, 214);
     padding:10px 15px;
+    -webkit-transition: border .3s;
+    -o-transition: border .3s;
     transition: border .3s;
+}
+#contactUs>div form textarea::-webkit-input-placeholder{
+    color:rgb(214, 214, 214)
+}
+#contactUs>div form textarea:-ms-input-placeholder{
+    color:rgb(214, 214, 214)
+}
+#contactUs>div form textarea::-ms-input-placeholder{
+    color:rgb(214, 214, 214)
 }
 #contactUs>div form textarea::placeholder{
     color:rgb(214, 214, 214)
@@ -1668,17 +1716,25 @@ footer .item5 ul i{
     margin-top:20px;
     border-radius:50px;
     border:2px solid transparent;
+    background: -webkit-linear-gradient(45deg,#39d1a0,rgb(45, 189, 174));
+    background: -o-linear-gradient(45deg,#39d1a0,rgb(45, 189, 174));
     background: linear-gradient(45deg,#39d1a0,rgb(45, 189, 174));
     color:#fff;
     font-size: 20px;
+    -webkit-transition:.3s;
+    -o-transition:.3s;
     transition:.3s;
     cursor: pointer;
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
 }
 #contactUs>div form button:hover{
     border:2px solid #39d1a0;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color:#39d1a0;
+    background: -webkit-linear-gradient(45deg,#fff,#fff);
+    background: -o-linear-gradient(45deg,#fff,#fff);
     background: linear-gradient(45deg,#fff,#fff);
 }
 @media (min-width: 992px) and (max-width: 1199px) { 
@@ -1698,7 +1754,10 @@ footer .item5 ul i{
         padding:20px
     }
     #contactUs>div form>div{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width:100%
     }
     #contactUs>div form{
@@ -1715,6 +1774,6 @@ footer .item5 ul i{
     }
     #contactUs>h1{
         padding:0;
-    }
+    }jrfbm
    
 }
