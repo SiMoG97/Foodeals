@@ -45,7 +45,8 @@
 main#partnerMain{
     width:1170px;
     /* margin:150px auto 0; */
-    margin:0px auto 250px;
+    position:relative;
+    margin:50px auto 250px;
 
     /* background:red; */
     height:500px;
@@ -324,7 +325,8 @@ main#partnerMain section:nth-child(2){
     }
     main#partnerMain section h1{
         color:#fff;
-        margin-bottom:350px;
+        margin-bottom:400px;
+        margin-top:40px;
         font-weight:400;
         font-size: 30px;
         text-align: left;
@@ -433,6 +435,24 @@ main#partnerMain section:nth-child(2){
     width:40px;height:40px
 }
 
+#goHome{
+    background: #fff;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    position: absolute;
+    top:-20px;
+    left:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+#goHome>svg{
+    width:25px;
+    height:25px;
+    fill:#37D0A0;
+}
 @media (min-width: 992px) and (max-width: 1199px) { 
     #inscrivous>#iconContainer {
          width: 970px;
@@ -449,6 +469,17 @@ main#partnerMain section:nth-child(2){
     }
 }
 @media (max-Width :767px){
+    #goHome{
+        width:40px;
+        height:40px;
+        top:-30px;
+        left:10px;
+    }
+    #goHome>svg{
+        width:25px;
+        height:25px;
+        fill:#37D0A0;
+    }
     #inscrivous>#iconContainer{
         padding:20px 0;
         width:auto

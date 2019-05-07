@@ -959,7 +959,8 @@
         text-align: center;
     }
     #aPropos>div:nth-child(2) p{
-        padding-left:0
+        padding-left:0;
+        padding: 10px;
     }
     .comCaMarchPart>div{
         -webkit-box-orient: vertical;
@@ -1774,6 +1775,6 @@ footer .item5 ul i{
     }
     #contactUs>h1{
         padding:0;
-    }jrfbm
+    }
    
 }
