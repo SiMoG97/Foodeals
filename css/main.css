@@ -1079,7 +1079,6 @@
     .testimony-item .testimony-pic {
       width: 70px;
       height: 70px;
-      background: url(../img/testimony-pic.jpg) no-repeat;
       -webkit-transform: translateX(-5px);
           -ms-transform: translateX(-5px);
               transform: translateX(-5px);
@@ -1089,18 +1088,18 @@
       border: 5px solid #32c8b4;
       margin-bottom: 10px;
       cursor: pointer; }
-      .testimony-item:nth-child(1) .testimony-pic{
-        background: url(../img/testimonials1.jpg) no-repeat !important;
+      #testimony-pic1{
+        background: url(../img/testimonials1.jpg) no-repeat ;
         background-size: 70px 70px !important;
         background-position:-5px 0px !important;
       }
-      .testimony-item:nth-child(2) .testimony-pic{
-        background: url(../img/testimonials2.jpg) no-repeat !important;
+      #testimony-pic2{
+        background: url(../img/testimonials2.jpg) no-repeat ;
         background-size: 70px 70px !important;
         background-position:-5px 0px !important;
       }
-      .testimony-item:nth-child(3) .testimony-pic{
-        background: url(../img/testimonials3.jpg) no-repeat !important;
+      #testimony-pic3{
+        background: url(../img/testimonials3.jpg) no-repeat ;
         background-size: 70px 70px !important;
         background-position:-5px -5px !important;
       }
@@ -1206,13 +1205,13 @@
         }
     }
     @media (max-Width :767px){
-        .testimony-item:nth-child(1) .testimony-pic{
+        #testimony-pic1{
             background-size: 50px 50px !important;
           }
-          .testimony-item:nth-child(2) .testimony-pic{
+          #testimony-pic2{
             background-size: 50px 50px !important;
           }
-          .testimony-item:nth-child(3) .testimony-pic{
+          #testimony-pic3{
             background-size: 50px 50px !important;
           }
         #testimoialsContainer{
