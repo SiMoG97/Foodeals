@@ -133,11 +133,9 @@
         padding:10px 0;
         -webkit-animation: scrolldown .3s 1 forwards;
                 animation: scrolldown .3s 1 forwards;
-        left:0;
-        padding:10px 10px;
         width:100vw;
-        -webkit-box-shadow:0px 5px 30px #9a9a9a69;
-                box-shadow:0px 5px 30px #9a9a9a69;
+        left:0;
+        padding:10px 10px; 
         border-bottom:#39d1a0 solid 1px 
     }
     .navFixedScrollUp{
@@ -152,8 +150,6 @@
        width:100vw;
        -webkit-animation: scrollUp .3s 1;
                animation: scrollUp .3s 1;
-       -webkit-box-shadow:0px 5px 30px #9a9a9a69;
-               box-shadow:0px 5px 30px #9a9a9a69;
        border-bottom:#39d1a0 solid 1px 
     }
     @-webkit-keyframes scrollUp{
@@ -1077,6 +1073,9 @@
       background: url(../img/quote.png) no-repeat;
       background-size: cover;
       background-position: center; }
+
+     
+
     .testimony-item .testimony-pic {
       width: 70px;
       height: 70px;
@@ -1090,6 +1089,21 @@
       border: 5px solid #32c8b4;
       margin-bottom: 10px;
       cursor: pointer; }
+      .testimony-item:nth-child(1) .testimony-pic{
+        background: url(../img/testimonials1.jpg) no-repeat !important;
+        background-size: 70px 70px !important;
+        background-position:-5px 0px !important;
+      }
+      .testimony-item:nth-child(2) .testimony-pic{
+        background: url(../img/testimonials2.jpg) no-repeat !important;
+        background-size: 70px 70px !important;
+        background-position:-5px 0px !important;
+      }
+      .testimony-item:nth-child(3) .testimony-pic{
+        background: url(../img/testimonials3.jpg) no-repeat !important;
+        background-size: 70px 70px !important;
+        background-position:-5px -5px !important;
+      }
     .testimony-item h1 {
       text-transform: uppercase;
       font-size: 13pt;
@@ -1192,6 +1206,15 @@
         }
     }
     @media (max-Width :767px){
+        .testimony-item:nth-child(1) .testimony-pic{
+            background-size: 50px 50px !important;
+          }
+          .testimony-item:nth-child(2) .testimony-pic{
+            background-size: 50px 50px !important;
+          }
+          .testimony-item:nth-child(3) .testimony-pic{
+            background-size: 50px 50px !important;
+          }
         #testimoialsContainer{
             padding:20px 0;
             height:auto
