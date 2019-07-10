@@ -1282,72 +1282,47 @@
 /* Trusted us part start here */
 
 #trustedUs{
-    /* height:900px; */
     width:100%;
     text-align: center;
-    padding:30px 0
+    padding:30px 0;
 }
+#trustedUs>div::before,#trustedUs>div::after{
+    height:100px;
+    width:200px;
+    content:'';
+    position:absolute;
+    background:linear-gradient(to right,#fff 0%,rgba(255,255,255,0) 100%);
+    top:0;
+    z-index:2;
+}
+#trustedUs>div::after{left:0;}
+#trustedUs>div::before{right:0;transform: rotateZ(180deg)}
 #trustedUs>h1{
     font-weight:400;
-    margin:40px 0
+    margin:40px 0;
+
 }
 #trustedUs>div{
-    width:1170px;
-    margin:50px auto;
-    display:-webkit-box;
-    display:-ms-flexbox;
     display:flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 50px 0;
+    height:100px;
+    position: relative;
+    margin:80px 0;
 }
-#trustedUs>div div svg{
-    width:100px !important;
-    height:100px !important
+#trustedUs .trustedSlider{
+    /* margin:50px 0; */
+    height:100px;
+    display:flex; 
+    align-items: center;
+    animation: slideShow 30s linear infinite;
 }
-#trustedUs>div div svg {
-    cursor:pointer
+#trustedUs .trustedSlider img{
+    height:80px;
+    padding: 0 30px 0;
 }
-#trustedUs>div div svg path{
-    -webkit-transition: fill .3s;
-    -o-transition: fill .3s;
-    transition: fill .3s;
-    fill:#acacac !important;  
-} 
-#trustedUs>div div svg:hover path{
-    fill:#33cab1 !important;
-} 
-
-@media (min-width: 992px) and (max-width: 1199px) { 
-    #trustedUs>div{
-        width:970px;  
-    }
- }
- @media (min-width: 768px) and (max-width: 991px) { 
-    #trustedUs>div{
-        width: 750px;
-    }
+@keyframes slideShow{
+    0%{transform: translateX(0)}
+    100%{transform: translateX(-100%)}
 }
-
-@media (max-Width :767px){
-    #trustedUs>div{
-        width: auto;
-        padding:20px
-    }
-    #trustedUs>div div{
-        overflow:hidden
-    }
-    #trustedUs>div div svg{
-        width:50px !important;
-        height:50px !important
-    }
-}
-
-
-
 /* footer style start here */
 
 
