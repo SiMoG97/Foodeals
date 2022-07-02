@@ -1,3 +1,4 @@
 # Foodeals
-i built this project when i was just started to learn coding . 
+Learining Project. 
+I built this project in the early days.
 the files are a mess
